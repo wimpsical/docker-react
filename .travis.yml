@@ -8,7 +8,7 @@ before_install:
 script: 
   - docker run -e CI=true j4ven/docker-react npm run test
 
- deploy: 
+deploy: 
   provider: elasticbeanstalk 
   region: "us-east-1"
   app: "docker-react"
