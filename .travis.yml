@@ -6,7 +6,7 @@ before_install:
   - docker build -t j4ven/docker-react -f Dockerfile.dev .
 
 script: 
- - docker run -e CI=true j4ven/docker-react npm run test
+  - docker run -e CI=true j4ven/docker-react npm run test
 
  deploy: 
   provider: elasticbeanstalk 
@@ -18,4 +18,4 @@ script:
   on: 
     branch: master
   access_key_id: $AWS_ACCESS_KEY 
-  secret_access_key: "$AWS_SECRET_KEY"
+  secret_access_key: $AWS_SECRET_KEY
